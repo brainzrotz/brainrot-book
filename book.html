@@ -2,33 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brain Rot Book</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  <h2>Enter your BrainRot name to start:</h2>
-  <input type="text" id="username" />
-  <button onclick="login()">Start</button>
-</div>
-<body><h2 id="greeting"></h2>
- <div id="book" style="display: none;">
-  <h2 id="greeting"></h2> <!-- ✔ Correct location -->
-  <button onclick="logout()">Logout</button>.
-    <!-- etc -->
-</div>
-  <!-- Image, caption, and next button come after -->
-    <img id="scene" src="scene1.jpg" alt="Scene" />
-    <p id="caption">This is what my brain sees at 3AM...</p>
-    <button onclick="nextScene()">Next</button>
-  </div>
-  <script src="script.js"></script>
-</body>
 <body>
   <div id="book" style="display: none;">
     <h2 id="greeting"></h2>
-    <button onclick="logout()">Logout</button>
-    <img id="scene" src="lobster1.jpg" alt="Scene" />
-    <p id="caption">This is what my brain sees at 3AM...</p>
+    <body>
+  <button onclick="logout()" class="logout-btn">Logout</button>
+  <div id="book" style="display: none;">
+    ...
+  </div>
+</body>
+
+    <img id="scene" src="" alt="Scene" />
+    <p id="caption"></p>
+    <p id="subtitle"></p>
+
+    <div id="choices"></div>
     <button onclick="nextScene()">Next</button>
   </div>
 

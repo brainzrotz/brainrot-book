@@ -3,24 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - Brain Rot Book</title>
+  <title>Login - Brain Rot</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="login-page">
-    <h2>Enter your name to begin:</h2>
+<body class="login-background">
+
+  <div class="login-wrapper">
+    <h2>Enter your BrainRot name to start:</h2>
     <input type="text" id="username" />
-    <button onclick="submitLogin()">Start</button>
+    <button onclick="login()">Start</button>
   </div>
 
-  <script>
-    function submitLogin() {
-      const name = document.getElementById("username").value.trim();
-      if (name) {
-        sessionStorage.setItem("username", name);
-        window.location.href = "book.html";
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
