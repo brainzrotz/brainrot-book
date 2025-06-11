@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brain Rot Book</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="homepage" id="homepage">
+    <h1>🧠 BRAIN ROT BOOK</h1>
+    <p>Enter a world of chaos, memes, and madness.</p>
+    <button onclick="startReading()">Start Reading</button>
+  </div>
+
+  <div class="loading-screen" id="loading" style="display: none;">
+    <h2>💀 Booting up the madness...</h2>
+    <p class="loading-dots">.</p>
+  </div>
+
+  <script>
+    function startReading() {
+      // Hide homepage, show loading screen
+      document.getElementById("homepage").style.display = "none";
+      document.getElementById("loading").style.display = "block";
+
+      // Animate loading dots
+      let dots = document.querySelector(".loading-dots");
+      let count = 0;
+      let interval = setInterval(() => {
+        dots.textContent += ".";
+        count++;
+        if (count >= 3) dots.textContent = ".";
+      }, 400);
+
+      // After 3 seconds, go to login page
+      setTimeout(() => {
+        clearInterval(interval);
+        window.location.href = "login.html";
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
