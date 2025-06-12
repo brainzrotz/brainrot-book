@@ -515,20 +515,20 @@ button:hover {
   transform: scale(1.1);
 }
 .logout-btn {
-  padding: 6px 14px;
-  font-size: 14px;
-  border: none;
-  border-radius: 8px;
-  background-color: red;
-  color: white;
-  font-family: monospace;
-  box-shadow: 0 0 6px crimson;
-  cursor: pointer;
   position: fixed;
   bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
+  left: 10px;
+  padding: 6px 10px;
+  font-size: 9px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: monospace;
+  box-shadow: 0 0 0.6px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .logout-btn:hover {
