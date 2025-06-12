@@ -128,6 +128,12 @@ const scenes = [
     text: "Snailio Blingzoom",
     subtitle: "cracker-limo cruisin’, leaving a trail of sparkle and swagger",
     choices: ["Lovely limo", "TOO CHEEESY"]
+  },
+    {
+    img: "poop.jpg",
+    text: "Captain Mcpoopy Creamy",
+    subtitle: "ice-scream? YOU SCREAM",
+    choices: ["Poopy rocket", "Love chocolate"]
   }
 ];
 
