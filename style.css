@@ -515,19 +515,20 @@ button:hover {
   transform: scale(1.1);
 }
 .logout-btn {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  background-color: rgb(10, 201, 74);
-  color: white;
-  padding: 10px 20px;
-  font-weight: bold;
+  padding: 6px 14px;
+  font-size: 14px;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 0 12px rgb(255, 255, 255);
+  background-color: red;
+  color: white;
+  font-family: monospace;
+  box-shadow: 0 0 6px crimson;
   cursor: pointer;
-  z-index: 999;
-  transition: all 0.3s ease;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 
 .logout-btn:hover {
@@ -548,8 +549,9 @@ html, body {
 body.landing {
   background-image: url("landing.jpg"); /* Update with actual filename */
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
+  background-color: black; /* fallback fill */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -623,8 +625,8 @@ img#scene {
 
 button,
 .choice-btn {
-  padding: 12px 24px;
-  font-size: 18px;
+  padding: 6px 12px;
+  font-size: 14px;
   margin: 10px auto;
   border-radius: 10px;
   display: block;
@@ -711,5 +713,24 @@ button,
     font-size: 14px;
     padding: 8px;
     width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .join-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+    max-width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .join-btn {
+    font-size: 12px;
+    padding: 5px 12px;
+    bottom: 10%;
+  }
+
+  body.landing {
+    padding-bottom: 0;
+    align-items: flex-end;
   }
 }
