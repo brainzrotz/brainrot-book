@@ -535,243 +535,7 @@ button:hover {
   transform: scale(1.05) rotate(-1deg);
   box-shadow: 0 0 16px rgb(21, 23, 138);
 }
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  img#scene {
-    width: 95%;
-    max-width: 100%;
-  }
-
-  .choice-btn,
-  button {
-    width: 90%;
-    margin: 8px auto;
-    font-size: 18px;
-  }
-
-  .login-wrapper,
-  .homepage,
-  #book {
-    padding: 20px;
-  }
-
-  #greeting {
-    font-size: 22px;
-  }
-}
-/* ✅ GLOBAL FIXES */
-html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-/* ✅ IMAGES - shrink to fit screen */
-img#scene {
-  width: 90%;
-  max-width: 500px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-}
-
-/* ✅ BUTTONS */
-button, .choice-btn {
-  padding: 12px 24px;
-  font-size: 18px;
-  margin: 10px auto;
-  border-radius: 10px;
-  display: inline-block;
-}
-
-/* ✅ TEXT + CONTAINERS */
-#caption, #subtitle {
-  font-size: 18px;
-  max-width: 90%;
-  margin: 10px auto;
-}
-
-/* ✅ MOBILE ONLY FIXES */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  img#scene {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .login-wrapper,
-  .homepage,
-  #book {
-    padding: 10px;
-    width: 100%;
-  }
-
-  button, .choice-btn {
-    width: 90%;
-    font-size: 18px;
-  }
-
-  #greeting {
-    font-size: 20px;
-  }
-}
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding: 5px;
-  }
-
-  img#scene {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
-  }
-
-  .login-wrapper,
-  .homepage,
-  #book {
-    padding: 5px;
-    width: 100%;
-  }
-
-  button, .choice-btn {
-    width: 40%;
-    font-size: 16px;
-    padding: 10px 10px;
-    margin: 5px auto;
-    border-radius: 8px;
-  }
-
-  #greeting,
-  #caption,
-  #subtitle {
-    font-size: 16px;
-    margin: 8px auto;
-    padding: 0 10px;
-  }
-
-  input#username {
-    font-size: 16px;
-    padding: 8px;
-    width: 80%;
-  }
-}
-/* JOIN button styling */
-.join-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 6px 14px;
-  font-size: 12px;
-  background-color: lime;
-  color: black;
-  font-family: monospace;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 0 6px lime;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.join-btn:hover {
-  transform: translate(-60%, -60) scale(1.05);
-}
-
-body.loading-image {
-  background-image: url("your-actual-image.jpg"); /* Replace this */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* 📱 MOBILE RESPONSIVE FIXES */
-@media (max-width: 600px) {
-.join-btn {
-  padding: 10px 20px;
-  font-size: 18px;
-  border-radius: 10px;
-  background-color: lime;
-  color: black;
-  font-family: monospace;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 0 8px lime;
-}
-
-.login-wrapper {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border: 2px solid lime;
-  border-radius: 12px;
-  color: lime;
-  font-family: monospace;
-  width: 90%;
-  max-width: 320px;
-  text-align: center;
-}
-  .login-wrapper h2 {
-    font-size: 16px;
-  }
-
-.login-wrapper input,
-.login-wrapper button {
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 16px;
-  width: 100%;
-  border-radius: 6px;
-  border: none;
-}
-
-body.login-background {
-  background-image: url("login-background.jpg"); /* your image name */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-body.landing {
-  background-image: url("landing.jpg"); /* update with correct filename */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-}
-/* 🌐 General Reset */
+/* 🌐 Reset & Global */
 html, body {
   margin: 0;
   padding: 0;
@@ -780,9 +544,9 @@ html, body {
   font-family: monospace;
 }
 
-/* 🌆 JOIN Page Desktop */
+/* 🌆 JOIN PAGE */
 body.landing {
-  background-image: url("landing.jpg"); /* use correct file name */
+  background-image: url("landing.jpg"); /* Update with actual filename */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -791,9 +555,9 @@ body.landing {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-/* 🎯 JOIN Button */
 .join-btn {
   padding: 12px 24px;
   font-size: 18px;
@@ -804,13 +568,17 @@ body.landing {
   font-weight: bold;
   box-shadow: 0 0 20px limegreen;
   cursor: pointer;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* 🧠 LOGIN Page Desktop */
+/* 🧠 LOGIN PAGE */
 body.login-background {
-  background-image: url("login-bg.jpg");
+  background-image: url("login-bg.jpg"); /* Update with actual filename */
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
@@ -819,14 +587,18 @@ body.login-background {
 }
 
 .login-wrapper {
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.75);
   border: 2px solid lime;
+  border-radius: 12px;
   padding: 20px;
-  border-radius: 10px;
   width: 90%;
   max-width: 340px;
   text-align: center;
   color: lime;
+}
+
+.login-wrapper h2 {
+  font-size: 18px;
 }
 
 .login-wrapper input,
@@ -837,13 +609,48 @@ body.login-background {
   border: none;
   border-radius: 6px;
   font-size: 16px;
+  font-family: monospace;
 }
+
+/* 📖 BOOK/STORY PAGE */
+img#scene {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+button,
+.choice-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  margin: 10px auto;
+  border-radius: 10px;
+  display: block;
+  width: auto;
+  max-width: 90%;
+}
+
+#caption, #subtitle {
+  font-size: 18px;
+  max-width: 90%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* 📱 MOBILE: Up to 600px */
 @media (max-width: 600px) {
-  .join-btn {
-    padding: 10px 20px;
+  body {
     font-size: 14px;
+    padding: 8px;
   }
-}
+
+  .join-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    max-width: 80%;
+  }
 
   .login-wrapper {
     padding: 16px;
@@ -860,16 +667,49 @@ body.login-background {
     padding: 8px;
   }
 
-body.landing {
-  background-image: url("landing.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  button,
+  .choice-btn {
+    width: 90%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  img#scene {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  #caption, #subtitle {
+    font-size: 16px;
+    margin: 8px auto;
+  }
+}
+
+/* 📱 SMALL MOBILE: Up to 400px */
+@media (max-width: 400px) {
+  .login-wrapper {
+    padding: 12px;
+    max-width: 260px;
+  }
+
+  .login-wrapper h2 {
+    font-size: 15px;
+  }
+
+  .join-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  button,
+  .choice-btn {
+    font-size: 14px;
+  }
+
+  input#username {
+    font-size: 14px;
+    padding: 8px;
+    width: 80%;
+  }
 }
