@@ -1,7 +1,7 @@
 // 🔊 Sound setup
 const audio = new Audio("click.mp3");
 
-// 📖 Full scene list (your updated version)
+// 📖 Full scene list
 const scenes = [
   {
     img: "lobster1.jpg",
@@ -122,10 +122,17 @@ const scenes = [
     text: "Ghost Toastington",
     subtitle: "Interrogate the guilty teacup",
     choices: ["Lick the jelly magnifier", "Lick the jelly magnifier"]
+  },
+  {
+    img: "snail.jpg",
+    text: "Snailio Blingzoom",
+    subtitle: "cracker-limo cruisin’, leaving a trail of sparkle and swagger",
+    choices: ["Lovely limo", "TOO CHEEESY"]
   }
 ];
 
 let current = 0;
+let path = [];
 
 function nextScene(index = null) {
   audio.play();
@@ -142,8 +149,9 @@ function nextScene(index = null) {
 
   if (current >= scenes.length) current = 0;
 
-  const scene = scenes[current];
+  path.push(current);
 
+  const scene = scenes[current];
   document.getElementById("scene").src = scene.img;
   document.getElementById("caption").innerText = scene.text;
   document.getElementById("subtitle").innerText = scene.subtitle || "";
@@ -155,10 +163,33 @@ function nextScene(index = null) {
     scene.choices.forEach((choice, i) => {
       const btn = document.createElement("button");
       btn.innerText = choice;
-      btn.onclick = () => nextScene();
+      btn.onclick = () => branchLogic(current, i);
       btn.classList.add("choice-btn");
       choicesDiv.appendChild(btn);
     });
+  }
+}
+
+// 🔀 Branch logic system
+function branchLogic(sceneIndex, choiceIndex) {
+  const branches = {
+    0: [1, 2],
+    1: [3, 4],
+    2: [5, 6],
+    3: [7, 8],
+    4: [9, 10],
+    5: [11, 12],
+    6: [13, 14],
+    7: [15, 16],
+    8: [17, 18],
+    9: [19, 0] // loops back to start as default
+  };
+
+  const options = branches[sceneIndex];
+  if (options && options[choiceIndex] !== undefined) {
+    nextScene(options[choiceIndex]);
+  } else {
+    nextScene();
   }
 }
 
@@ -193,7 +224,7 @@ window.onload = function () {
       window.location.href = "login.html";
     } else {
       showBook(saved);
-      nextScene(0); // Start from first scene
+      nextScene(0);
     }
   }
 };
