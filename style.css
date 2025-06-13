@@ -214,7 +214,7 @@ button {
 body.landing {
   margin: 0;
   padding: 0;
-  background: url('landing.jpg') no-repeat center center fixed;
+  background: url('JPG/landing.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -237,7 +237,7 @@ body.landing {
 body.loading-image {
   margin: 0;
   padding: 0;
-  background: url('landing.jpg') no-repeat center center fixed;
+  background: url('JPG/landing.jpg') no-repeat center center fixed;
   background-size: contain;
   overflow: auto;
   font-family: monospace;
@@ -259,7 +259,7 @@ body.loading-image {
 body.loading-image {
   margin: 0;
   padding: 0;
-  background: url('landing.jpg') no-repeat center center fixed;
+  background: url('JPG/landing.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -371,7 +371,7 @@ body.login-background {
   margin: 0;
   padding: 0;
   background: rgb(0, 0, 0);
-  background-image: url("login-bg.jpg");
+  background-image: url("JPG/login-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1700px auto; /* ✅ Shrinks width of image */
@@ -536,7 +536,7 @@ html, body {
 
 /* 🧠 LOGIN PAGE */
 body.login-background {
-  background-image: url("login-bg.jpg"); /* Update with actual filename */
+  background-image: url("JPG/login-bg.jpg"); /* Update with actual filename */
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
