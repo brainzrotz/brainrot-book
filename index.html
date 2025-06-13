@@ -15,3 +15,14 @@
 
 </body>
 </html>
+<audio id="landing-audio" src="landing-sound.mp3" preload="auto"></audio>
+<script>
+  const audio = document.getElementById("landing-audio");
+
+  function startAudioOnce() {
+    audio.play();
+    document.removeEventListener("click", startAudioOnce);
+  }
+
+  document.addEventListener("click", startAudioOnce);
+</script>
