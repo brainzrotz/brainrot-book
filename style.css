@@ -320,20 +320,26 @@ body.landing-centered {
 /* Overlay JOIN button directly on the image */
 .join-overlay {
   position: absolute;
-  bottom: 14%; /* Adjust this to place it over the actual "JOIN" in the image */
+  bottom: 14%;
   left: 51%;
   transform: translateX(-30%);
   font-size: 28px;
   padding: 17px 68px;
-  background: linear-gradient(to right, #7a52da, #ff0080, #7a52da);;
+  background: linear-gradient(to right, #7a52da, #ff0080, #2a2a7a);
   color: white;
   font-weight: bold;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   box-shadow: 0 0 15px white;
-  animation: pulse 1.5s infinite;
-  text-shadow: 0 0 8px black;
+  animation: pulse 0.8s infinite;
+  /* Add a thin black outline around the text */
+  text-shadow:
+    -0.5px -0.5px 0 black,
+    0px 0px 0 black,
+    -1px 1px 0 black,
+    -1px -1px 0 black,
+    0 0 8px black;
 }
 /* Reduce size on mobile phones in portrait mode */
 @media screen and (max-width: 600px) and (orientation: portrait) {
@@ -484,18 +490,20 @@ button:hover {
 }
 .logout-btn {
   position: fixed;
-  bottom: 10px;
+  top: 10px;        /* Top-left corner */
   left: 10px;
-  padding: 6px 10px;
-  font-size: 9px;
+  width: 30px;      /* small round button */
+  height: 30px;
+  padding: 0;       /* no extra padding */
   border: none;
-  border-radius: 8px;
-  background-color: rgb(0, 0, 0);
-  color: white;
+  border-radius: 50%;
+  font-size: 9px;
+  background-color: rgb(204, 20, 20);
+  color: rgb(255, 255, 255);
   font-family: monospace;
-  box-shadow: 0 0 0.6px red;
-  z-index: 9999;
+  box-shadow: 0 0 0.6px rgb(7, 214, 34);
   cursor: pointer;
+  z-index: 9999;
   transition: all 0.2s ease-in-out;
 }
 
