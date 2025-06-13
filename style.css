@@ -314,7 +314,7 @@ body.loading-image {
   bottom: 11%;
   left: 50%;
   transform: translateX(-30%);
-  font-size: 0px;
+  font-size: 30px;
   padding: 17px 78px;
   background: linear-gradient(to right, #7a52da, #ff0080, #2a2a7a);
   color: white;
@@ -324,7 +324,7 @@ body.loading-image {
   cursor: pointer;
   box-shadow: 0 0 15px white;
   animation: pulse 1.8s infinite;
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -344,7 +344,10 @@ body.loading-image {
     padding: 20px 115px; /* scale padding proportionally */
     width: auto;         /* keep button’s natural width */
     display: inline-block;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
       }
   /* Ensure landing image covers entire viewport on small portrait screens */
   .landing-container {
