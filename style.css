@@ -190,8 +190,8 @@ button {
 }
 #logout-btn {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 30px;
   background-color: #8b0000; /* Dark blood red */
   color: white;
   padding: 10px 18px;
@@ -491,14 +491,14 @@ button:hover {
 .logout-btn {
   position: fixed;
   top: 10px;        /* Top-left corner */
-  left: 10px;
+  left: 20px;
   width: 30px;      /* small round button */
   height: 30px;
   padding: 0;       /* no extra padding */
   border: none;
   border-radius: 50%;
   font-size: 9px;
-  background-color: rgb(204, 20, 20);
+  background-color: rgb(216, 13, 91);
   color: rgb(255, 255, 255);
   font-family: monospace;
   box-shadow: 0 0 0.6px rgb(7, 214, 34);
@@ -694,4 +694,8 @@ body.login-background {
     width: 80%;
     max-width: 300px;
   }
+}
+#caption {
+    font-weight: bold;
+    font-size: 1.5rem;
 }

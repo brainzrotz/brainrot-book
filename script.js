@@ -4,7 +4,7 @@ const audio = new Audio("click.mp3");
 // 📖 Full scene list
 const scenes = [
   {
-    img: "lobster1.jpg",
+    img:  "lobster1.jpg",
     text: "Lobsteroni Supreme",
     subtitle: "Appears at 3AM demanding a dance battle... and orange juice.",
     choices: ["Join in!", "I love to dance"]
@@ -134,7 +134,37 @@ const scenes = [
     text: "Captain Mcpoopy Creamy",
     subtitle: "ice-scream? YOU SCREAM",
     choices: ["Poopy rocket", "Love chocolate"]
-  }
+  },
+  {
+    img: "lamp.jpg",
+    text: "Lampy Bloomcord",
+    subtitle: "in a sky island of rainbow snails and bouncing blobs. ☁️",
+    choices: ["Watch-out, cactus!", "Not too sharp"]
+  },
+  {
+    img: "mouse.jpg",
+    text: "Mike McMoucy",
+    subtitle: "cheese-gadget-loving, hoodie-rockin’, pizza-riding mouse legend",
+    choices: ["Too cheesy", "LOVE cheese"]
+  },
+   {
+    img: "boat.jpg",
+    text: "McBoat McBoaty Face",
+    subtitle: "100% floating on pure brain rot energy.",
+    choices: ["Row, row, row the boat", "Jelly aint sea"]
+  },
+   {
+    img: "chicken.jpg",
+    text: "ChiKEN",
+    subtitle: "laundromat legend",
+    choices: ["Do-nut watch TV!", "YOU CAN'T WASH DONUTS"]
+  },
+   {
+    img: "rock.jpg",
+    text: "Rockcell Signalblast",
+    subtitle: "The mobile legend of the concert circuit 📱🎸",
+    choices: ["We-will-rock YOU!", "Do you feel the connection?"]
+  }  
 ];
 
 let current = 0;
