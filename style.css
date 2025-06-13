@@ -332,14 +332,25 @@ body.loading-image {
     -1px -1px 0 black,
     0 0 8px black;
 }
-/* Reduce size on mobile phones in portrait mode */
+/* Enlarge JOIN button on portrait mobile */
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .join-overlay {
-    font-size: 14px;     /* half of the original 28px */
-    padding: 6px 54px;   /* half of the original 17px 68px */
+    /* enlarged to fill the landing image */
+    font-size: 56px;     /* 4x the previous mobile size */
+    padding: 22px 120px; /* scale padding proportionally */
     width: auto;         /* keep button’s natural width */
     display: inline-block;
-    
+      }
+  /* Ensure landing image covers entire viewport on small portrait screens */
+  .landing-container {
+    transform: none;
+  }
+
+  .landing-image {
+    max-width: none;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
   }
 }
 
