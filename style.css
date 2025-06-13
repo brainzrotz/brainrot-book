@@ -19,8 +19,8 @@ body {
 img {
   max-width: 50%;
   height: auto;
-  margin: 15px 0;
-  border: 4px solid lime;
+  margin: 5px 0;
+  border: 1px solid rgb(21, 196, 50);
   border-radius: 12px;
 }
 
@@ -281,7 +281,7 @@ body.loading-image {
 }
 /* Shutdown Effect */
 .shutdown {
-  animation: shutdownFlash 0.9s ease-in-out forwards;
+  animation: shutdownFlash 1.3s ease-in-out forwards;
   background: black !important;
   color: red;
 }
@@ -294,16 +294,7 @@ body.loading-image {
   80%  { opacity: 0.6; transform: scale(1.02); }
   100% { opacity: 0; filter: brightness(0); }
 }
-body.landing-centered {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: monospace;
-}
+
 
 .landing-container {
   position: relative;
@@ -348,7 +339,7 @@ body.landing-centered {
     padding: 6px 54px;   /* half of the original 17px 68px */
     width: auto;         /* keep button’s natural width */
     display: inline-block;
-
+    
   }
 }
 
@@ -521,21 +512,6 @@ html, body {
   font-family: monospace;
 }
 
-/* 🌆 JOIN PAGE */
-body.landing {
-  background-image: url("landing.jpg"); /* Update with actual filename */
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-color: black; /* fallback fill */
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
 /* general styles above ... */
 
 
@@ -693,6 +669,7 @@ body.login-background {
   .login-wrapper {
     width: 80%;
     max-width: 300px;
+    
   }
 }
 #caption {
