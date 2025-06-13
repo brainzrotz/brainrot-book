@@ -129,7 +129,7 @@ const scenes = [
     subtitle: "cracker-limo cruisin’, leaving a trail of sparkle and swagger",
     choices: ["Lovely limo", "TOO CHEEESY"]
   },
-    {
+  {
     img: "poop.jpg",
     text: "Captain Mcpoopy Creamy",
     subtitle: "ice-scream? YOU SCREAM",
@@ -138,6 +138,7 @@ const scenes = [
 ];
 
 let current = 0;
+let history = [];
 let path = [];
 
 function nextScene(index = null) {
@@ -155,9 +156,9 @@ function nextScene(index = null) {
 
   if (current >= scenes.length) current = 0;
 
+  const scene = scenes[current];
   path.push(current);
 
-  const scene = scenes[current];
   document.getElementById("scene").src = scene.img;
   document.getElementById("caption").innerText = scene.text;
   document.getElementById("subtitle").innerText = scene.subtitle || "";
@@ -174,9 +175,16 @@ function nextScene(index = null) {
       choicesDiv.appendChild(btn);
     });
   }
+
+  const log = document.getElementById("log");
+  if (log) {
+    const logItem = document.createElement("div");
+    logItem.className = "log-item";
+    logItem.innerText = `✔️ ${scene.text}`;
+    log.appendChild(logItem);
+  }
 }
 
-// 🔀 Branch logic system
 function branchLogic(sceneIndex, choiceIndex) {
   const branches = {
     0: [1, 2],
@@ -188,7 +196,7 @@ function branchLogic(sceneIndex, choiceIndex) {
     6: [13, 14],
     7: [15, 16],
     8: [17, 18],
-    9: [19, 0] // loops back to start as default
+    9: [19, 0]
   };
 
   const options = branches[sceneIndex];

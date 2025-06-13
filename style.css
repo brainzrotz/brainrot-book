@@ -7,12 +7,13 @@ body, html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: monospace;
   background: black;
   color: lime;
-  font-family: monospace;
   text-align: center;
-  margin: 20;
-  padding: 20px;
 }
 
 img {
@@ -250,7 +251,7 @@ body.loading-image {
   margin: 0;
   padding: 0;
   background: url('landing.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-size: contain;
   height: 100vh;
   overflow: hidden;
   font-family: monospace;
@@ -699,10 +700,21 @@ button,
     font-size: 15px;
   }
 
-  .join-btn {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
+.join-btn {
+  font-size: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(to right, red, blue);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 12px lime;
+  text-shadow: 0 0 6px black;
+  animation: pulse 1.5s infinite;
+  max-width: 90vw;
+  width: auto;
+}
 
   button,
   .choice-btn {
@@ -721,16 +733,9 @@ button,
     padding: 5px 10px;
     max-width: 70%;
   }
-}
-@media (max-width: 600px) {
-  .join-btn {
-    font-size: 12px;
-    padding: 5px 12px;
-    bottom: 10%;
-  }
-
+}@media screen and (max-width: 600px) and (orientation: portrait) {
   body.landing {
-    padding-bottom: 0;
-    align-items: flex-end;
+    background-size: contain;
+    background-position: center center;
   }
 }
