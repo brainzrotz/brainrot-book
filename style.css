@@ -312,18 +312,22 @@ body.loading-image {
 .join-overlay {
   position: absolute;
   bottom: 11%;
-  left: 51%;
+  left: 50%;
   transform: translateX(-30%);
-  font-size: 28px;
+  font-size: 0px;
   padding: 17px 78px;
   background: linear-gradient(to right, #7a52da, #ff0080, #2a2a7a);
   color: white;
   font-weight: bold;
   border: none;
-  border-radius: 20px;
+  border-radius: 80cm;
   cursor: pointer;
   box-shadow: 0 0 15px white;
   animation: pulse 1.8s infinite;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   /* Add a thin black outline around the text */
   text-shadow:
     -0.5px -0.5px 0 black,
@@ -336,10 +340,11 @@ body.loading-image {
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .join-overlay {
     /* enlarged to fill the landing image */
-    font-size: 56px;     /* 4x the previous mobile size */
-    padding: 22px 120px; /* scale padding proportionally */
+    font-size: 50px;     /* 4x the previous mobile size */
+    padding: 20px 115px; /* scale padding proportionally */
     width: auto;         /* keep button’s natural width */
     display: inline-block;
+    
       }
   /* Ensure landing image covers entire viewport on small portrait screens */
   .landing-container {
