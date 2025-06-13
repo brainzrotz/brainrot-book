@@ -320,11 +320,11 @@ body.landing-centered {
 /* Overlay JOIN button directly on the image */
 .join-overlay {
   position: absolute;
-  bottom: 14%;
+  bottom: 11%;
   left: 51%;
   transform: translateX(-30%);
   font-size: 28px;
-  padding: 17px 68px;
+  padding: 17px 78px;
   background: linear-gradient(to right, #7a52da, #ff0080, #2a2a7a);
   color: white;
   font-weight: bold;
@@ -332,7 +332,7 @@ body.landing-centered {
   border-radius: 20px;
   cursor: pointer;
   box-shadow: 0 0 15px white;
-  animation: pulse 0.8s infinite;
+  animation: pulse 1.8s infinite;
   /* Add a thin black outline around the text */
   text-shadow:
     -0.5px -0.5px 0 black,
