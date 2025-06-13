@@ -509,7 +509,7 @@ button:hover {
 
 .logout-btn:hover {
   background-color: rgb(0, 0, 0);
-  transform: scale(1.05) rotate(-1deg);
+  transform: scale(2.05) rotate(-1deg);
   box-shadow: 0 0 16px rgb(21, 23, 138);
 }
 /* 🌐 Reset & Global */
