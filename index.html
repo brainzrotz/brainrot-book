@@ -14,6 +14,8 @@
   </div>
 
 </body>
+<button id="funny-sound-btn">PRESS</button>
+
 </html>
 <audio id="landing-audio" src="landing-sound.mp3" preload="auto"></audio>
 <script>
@@ -25,4 +27,10 @@
   }
 
   document.addEventListener("click", startAudioOnce);
+</script>
+<script>
+  document.getElementById("funny-sound-btn").addEventListener("click", function () {
+    const sound = new Audio("sounds/landing-sound.mp3");
+    sound.play();
+  });
 </script>

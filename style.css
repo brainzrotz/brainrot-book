@@ -212,13 +212,17 @@ button {
   100% { box-shadow: 0 0 10px red; transform: translateY(2px); }
 }
 body.landing {
-  margin: 0;
-  padding: 0;
-  background: url('JPG/landing.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-image: url("GIF\brainzrotz-logo.gif"); /* 🎯 now using GIF */
+  background-size: contain;  /* or try 'cover' */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
   height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  font-family: monospace;
 }
 
 .overlay {
@@ -237,7 +241,7 @@ body.landing {
 body.loading-image {
   margin: 0;
   padding: 0;
-  background: url('JPG/landing.jpg') no-repeat center center fixed;
+  background: url('GIF/brainzrotz-logo.gif') no-repeat center center fixed;
   background-size: contain;
   overflow: auto;
   font-family: monospace;
@@ -268,6 +272,7 @@ body.loading-image {
   justify-content: center;
   align-items: center;
 }
+
 
 .overlay {
   text-align: center;
@@ -694,4 +699,38 @@ body.login-background {
 #caption {
     font-weight: bold;
     font-size: 1.5rem;
+}
+#funny-sound-btn {
+  position: absolute;
+  bottom: 60px;
+  right: 70px;
+  top: 5%;
+  left: 5%;
+  padding: 5px 5px;
+  background: linear-gradient(to right, #be0e0e, #ff0080, #b12447);
+  border: none;
+  border-radius: 25px;
+  font-size: 22px;
+  font-family: monospace;
+  animation: pulse 1.8s infinite;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  box-shadow: 5 5 10px lime;
+  transition: transform 0.4s ease-in-out;
+  max-width: 20%;
+  height: 8%;
+  z-index: 9999;
+    text-shadow:
+    -0.5px -0.5px 0 black,
+    0px 0px 0 black,
+    -1px 1px 0 black,
+    -1px -1px 0 black,
+    0 0 8px black;
+}
+
+#funny-sound-btn:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 1 1 25px cyan;
+  
 }

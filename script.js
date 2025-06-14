@@ -7,7 +7,8 @@ const scenes = [
     img:  "JPG/lobster1.jpg",
     text: "Lobsteroni Supreme",
     subtitle: "Appears at 3AM demanding a dance battle... and orange juice.",
-    choices: ["Join in!", "I love to dance"]
+    choices: ["Join in!", "I love to dance"],
+    sound: "sounds/lobster1.mp3"
   },
   {
     img: "JPG/lobster2.jpg",
@@ -271,4 +272,5 @@ window.onload = function () {
       nextScene(0);
     }
   }
+  
 };
