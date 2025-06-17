@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
   font-family: monospace;
   background: black;
-  color: lime;
   text-align: center;
 }
 
@@ -47,12 +46,12 @@ button {
 }
 .homepage {
   text-align: center;
-  color: lime;
   font-family: monospace;
   padding-top: 100px;
   background-color: black;
   height: 100vh;
 }
+
 
 .homepage h1 {
   font-size: 40px;
@@ -83,7 +82,6 @@ button {
 }
 .loading-screen {
   background-color: black;
-  color: lime;
   font-family: monospace;
   text-align: center;
   padding-top: 120px;
@@ -107,7 +105,6 @@ button {
 }
 .login-page {
   background-color: black;
-  color: lime;
   font-family: monospace;
   text-align: center;
   padding-top: 120px;
@@ -124,7 +121,6 @@ button {
 .login-page button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: lime;
   color: black;
   border: none;
   cursor: pointer;
@@ -212,19 +208,17 @@ button {
   100% { box-shadow: 0 0 10px red; transform: translateY(2px); }
 }
 body.landing {
-  margin: 0;
-  padding: 0;
-  background-image: url('JPG/landing.jpg');
-  background-position: center;
+  background-image: url("GIF\brainzrotz-logo.gif"); /* 🎯 now using GIF */
+  background-size: contain;  /* or try 'cover' */
   background-repeat: no-repeat;
-  background-size: cover; /* 🔥 FULLSCREEN COVER */
+  background-position: center;
+  background-color: black;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: monospace;
+  overflow: hidden;
 }
 
 .overlay {
@@ -267,7 +261,8 @@ body.loading-image {
   padding: 0;
   background: url('JPG/landing.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   font-family: monospace;
   display: flex;
@@ -749,9 +744,9 @@ body.login-background {
   background: radial-gradient(circle at top left, #ff4c4c, #b30000);
   border: none;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  font-size: 16px;
+  width: 70px;
+  height: 70px;
+  font-size: 12px;
   font-weight: bold;
   color: white;
   box-shadow: 0 8px 0 #660000, 0 0 20px red;
@@ -770,7 +765,94 @@ body.login-background {
   right: 80px;
   width: 50px;
   height: auto;
+  border: none !important;
   z-index: 999;
   pointer-events: none; /* So clicks pass through */
-  filter: drop-shadow(0 0 5px limegreen);
+   background-color: black; /* match your GIF background */
 }
+.main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  color: lime;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1000;
+  border-bottom: 2px solid lime;
+  font-family: monospace;
+}
+
+.main-menu a {
+  color: rgb(194, 152, 105);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.main-menu a:hover {
+  color: black;
+  background: lime;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+body.loading-image {
+  background-color: rgb(168, 106, 23); /* or any color that matches your GIF */
+  background-image: none;  /* ensure nothing is loaded */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-gif {
+  width: 50vw;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.splash-gif {
+  width: 60vw;
+  height: auto;
+  max-width: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  box-shadow: none;
+}
+
+body.splash-page {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Match GIF background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+/* 📱 DOUBLE SIZE ON PORTRAIT PHONES */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .splash-gif {
+    width: 100vw !important;
+    height: 130vw !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+}
+.splash-page img {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+  body.splash-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }

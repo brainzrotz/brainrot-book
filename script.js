@@ -248,7 +248,7 @@ function login() {
   const name = document.getElementById("username").value.trim();
   if (name) {
     sessionStorage.setItem("username", name);
-    window.location.href = "book.html";
+    window.location.href = "splash.html"; // 🌟 Redirect to splash first
   } else {
     alert("Please enter your BrainRot name!");
   }
