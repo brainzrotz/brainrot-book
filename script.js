@@ -235,6 +235,12 @@ function branchLogic(sceneIndex, choiceIndex) {
     nextScene(options[choiceIndex]);
   } else {
     nextScene();
+    if (scene.sound) {
+  const sceneAudio = new Audio(scene.sound);
+  sceneAudio.play().catch((err) => {
+    console.warn("Autoplay blocked or error:", err);
+  });
+}
   }
 }
 

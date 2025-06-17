@@ -9,15 +9,23 @@
 <body class="landing-centered">
 
   <div class="landing-container">
+    <!-- JOIN over image -->
     <img src="JPG/landing.jpg" alt="Brain Rot Landing" class="landing-image" />
     <button class="join-overlay" onclick="window.location.href='login.html'">JOIN</button>
   </div>
 
-</body>
-<button id="funny-sound-btn">PRESS</button>
+  <!-- PRESS in center of page -->
+  <div class="center-press-button">
+<button class="warning-btn" onclick="playLandingSound()">PRESS</button>
+<audio id="alert-sound" src="/sounds/landing-sound.mp3" preload="auto"></audio>
+  </div>
+<img src="\GIF\brainzrotz-logo.gif" 
+     alt="Brainzrotz Mascot" 
+     class="zombie-gif">
 
+</body>
 </html>
-<audio id="landing-audio" src="landing-sound.mp3" preload="auto"></audio>
+<audio id="landing-audio" src="/sounds/landing-sound.mp3" preload="auto"></audio>
 <script>
   const audio = document.getElementById("landing-audio");
 

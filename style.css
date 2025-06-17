@@ -212,17 +212,19 @@ button {
   100% { box-shadow: 0 0 10px red; transform: translateY(2px); }
 }
 body.landing {
-  background-image: url("GIF\brainzrotz-logo.gif"); /* 🎯 now using GIF */
-  background-size: contain;  /* or try 'cover' */
-  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-image: url('JPG/landing.jpg');
   background-position: center;
-  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover; /* 🔥 FULLSCREEN COVER */
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  font-family: monospace;
 }
 
 .overlay {
@@ -733,4 +735,42 @@ body.login-background {
   transform: scale(1.1) rotate(-2deg);
   box-shadow: 1 1 25px cyan;
   
+}
+.center-press-button {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+/* Fancy red warning button */
+.warning-btn {
+  background: radial-gradient(circle at top left, #ff4c4c, #b30000);
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 8px 0 #660000, 0 0 20px red;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  text-shadow: 0 1px 2px black;
+}
+
+.warning-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 0 #660000;
+}
+.zombie-gif {
+  position: fixed;
+  bottom: 90px;
+  right: 80px;
+  width: 50px;
+  height: auto;
+  z-index: 999;
+  pointer-events: none; /* So clicks pass through */
+  filter: drop-shadow(0 0 5px limegreen);
 }
